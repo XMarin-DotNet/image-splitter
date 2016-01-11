@@ -8,7 +8,7 @@ assembly_info:
   assembly_informational_version: '{version}'
 
 artifacts:
-  - path: ImageSplitter\bin\$(configuration)\*.exe
+  - path: '*.exe'
     name: ImageSplitter
     type: zip
 
