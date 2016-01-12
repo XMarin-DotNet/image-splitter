@@ -1,5 +1,5 @@
 # ImageSplitter
-[![Build status](https://ci.appveyor.com/api/projects/status/fno23tc9oh9ex3b2?svg=true)](https://ci.appveyor.com/project/gerich-home/image-splitter)
+[![Build status](https://ci.appveyor.com/api/projects/status/u3qjkjjhjbe1fjfo?svg=true)](https://ci.appveyor.com/project/gerich-home/image-splitter)
 
 Splits image into a set of tiles given tile size and a file
 

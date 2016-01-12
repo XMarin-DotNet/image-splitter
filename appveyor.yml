@@ -1,24 +1,28 @@
-version: 1.0.0
+environment:
+  baseVersion: 1.0.0
+  
+version: build-{build}
 
 skip_tags: true
 
 configuration: Release
-
+  
 assembly_info:
   patch: true
   file: AssemblyInfo.cs
-  assembly_version: '{version}'
-  assembly_file_version: '{version}'
-  assembly_informational_version: '{version}'
+  assembly_version: '{baseVersion}'
+  assembly_file_version: '{baseVersion}'
+  assembly_informational_version: '{baseVersion}'
 
 artifacts:
   - path: 'ImageSplitter\bin\$(configuration)\*.exe'
     name: ImageSplitter
 
 deploy:
-  release: ImageSplitter-v$(appveyor_build_version)
+  release: ImageSplitter-v$(baseVersion)-ci$(build)
   description: 'Image Splitter'
   provider: GitHub
+  prerelease: true
   auth_token:
     secure: iIQYZTIjnJwRMu4NGFO9iDWVxiULK/6RfSWY6R9Z8W7daJPdGQGMBqblEcpYa9xZ
   artifact: ImageSplitter
