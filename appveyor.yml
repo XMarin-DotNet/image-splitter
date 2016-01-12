@@ -10,9 +10,8 @@ assembly_info:
   assembly_informational_version: '{version}'
 
 artifacts:
-  - path: '*.exe'
-    name: ImageSplitter
-    type: zip
+  - path: ImageSplitter\bin\$(configuration)\ImageSplitter.exe
+    name: ImageSplitter.exe
 
 deploy:
   release: ImageSplitter-v$(appveyor_build_version)
@@ -20,6 +19,6 @@ deploy:
   provider: GitHub
   auth_token:
     secure: iIQYZTIjnJwRMu4NGFO9iDWVxiULK/6RfSWY6R9Z8W7daJPdGQGMBqblEcpYa9xZ
-  artifact: /.*\.zip/
+  artifact: ImageSplitter.exe
   on:
     branch: master
