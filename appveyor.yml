@@ -19,7 +19,7 @@ artifacts:
     name: ImageSplitter
 
 deploy:
-  release: 'ImageSplitter-v$(baseVersion)-ci{build}'
+  release: 'ImageSplitter-v$(baseVersion)-ci$(APPVEYOR_BUILD_NUMBER)'
   description: 'Image Splitter'
   provider: GitHub
   prerelease: true
