@@ -10,16 +10,16 @@ configuration: Release
 assembly_info:
   patch: true
   file: AssemblyInfo.cs
-  assembly_version: '{baseVersion}'
-  assembly_file_version: '{baseVersion}'
-  assembly_informational_version: '{baseVersion}'
+  assembly_version: '$(baseVersion)'
+  assembly_file_version: '$(baseVersion)'
+  assembly_informational_version: '$(baseVersion)'
 
 artifacts:
   - path: 'ImageSplitter\bin\$(configuration)\*.exe'
     name: ImageSplitter
 
 deploy:
-  release: ImageSplitter-v$(baseVersion)-ci$(build)
+  release: 'ImageSplitter-v$(baseVersion)-ci{build}'
   description: 'Image Splitter'
   provider: GitHub
   prerelease: true
