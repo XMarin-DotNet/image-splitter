@@ -18,6 +18,6 @@ deploy:
   provider: GitHub
   auth_token:
     secure: iIQYZTIjnJwRMu4NGFO9iDWVxiULK/6RfSWY6R9Z8W7daJPdGQGMBqblEcpYa9xZ
-  artifact: ImageSplitter.zip
+  artifact: /.*\.zip/
   on:
     branch: master
